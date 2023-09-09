@@ -1,8 +1,8 @@
 //  1.
 
 function sumNEvenNumbers(n: number): number {
-    var sum:number = 0;
-    for (var i:number = 1; i <= n; i++) {
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
         sum += 2 * i;
     }
     return sum;
@@ -15,7 +15,7 @@ console.log(`Sum of first ${n} even numbers: ${sumNEvenNumbers(n)}`);
 // 2.
 
 function printEvenNumbers(arr: number[]): void {
-    for (var i : number= 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         if (arr[i] % 2 === 0) {
             console.log(arr[i]);
         }
@@ -28,7 +28,7 @@ printEvenNumbers(arr);
 
 // 3.
 function removeEvenNumbers(arr: number[]): number[] {
-    for (var i:number = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         if (arr[i] % 2 === 0) {
             arr.splice(i, 1);
             i--; // Adjust index after removal
@@ -54,7 +54,7 @@ console.log(`Area of a circle with radius ${circleRadius}: ${CircleArea(circleRa
 
 // 5.
 function removeFailingGrades(grades: number[]): number[] {
-    for (var i : number = 0; i < grades.length; i++) {
+    for (let i = 0; i < grades.length; i++) {
         if (grades[i] < 50) {
             grades.splice(i, 1);
             i--; // Adjust index after removal
@@ -63,7 +63,7 @@ function removeFailingGrades(grades: number[]): number[] {
     return grades;
 }
 
-const gradesList = [95, 42, 80, 20, 65, 90, 40];
+var gradesList: number[] = [95, 42, 80, 20, 65, 90, 40];
 console.log("Original Grades:", gradesList);
 console.log("Passing Grades:", removeFailingGrades(gradesList));
 
@@ -79,6 +79,6 @@ function findLargestElement(arr: number[]): number {
     return largest;
 }
 
-const numbersArray = [12.5, 5.6, 67, 89, 34, 56, 18];
+var numbersArray:number[] = [12.5, 5.6, 67, 89, 34, 56, 18];
 console.log("Largest Element:", findLargestElement(numbersArray));
 

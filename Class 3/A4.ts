@@ -4,9 +4,9 @@ function push(arr: any[], index: number, value: any): any[] {
     return arr;
 }
 
-const myArray = [1, 2, 3, 4, 5];
-const index = 2;
-const value = 99;
+var myArray:number[] = [1, 2, 3, 4, 5];
+var index:number = 2;
+var value:number = 99;
 
 console.log(push(myArray, index, value));
 
@@ -18,14 +18,14 @@ function addItem(item: string) {
 }
 
 function removeItem(item: string) {
-    const index = shoppingCart.indexOf(item);
+    let index = shoppingCart.indexOf(item);
     if (index !== -1) {
         shoppingCart.splice(index, 1);
     }
 }
 
 function updateQuantity(item: string, newQuantity: number) {
-    const index = shoppingCart.indexOf(item);
+    let index = shoppingCart.indexOf(item);
     if (index !== -1) {
         shoppingCart[index] = `${item} Qnty${newQuantity}`;
     }
@@ -79,8 +79,6 @@ function Factorial(n: number): number {
         i++;
         }
     }
-
-
     return factorial;
 }
 
@@ -90,7 +88,7 @@ console.log(`Factorial of ${num} is ${Factorial(num)}`);
 
 // 6.
 function removeNegativeNumbers(arr: number[]): number[] {
-    var i:number = 0;
+    let i = 0;
     while (i < arr.length) {
         if (arr[i] < 0) {
             arr.splice(i, 1);
@@ -123,7 +121,7 @@ console.log(`Sum of numbers: ${SumOfNumbers(numbersArray)}`);
 //  8.
 var celsiusTemp: number[]= [0, 10, 20, 30, 40];
 var fahrenheitTemp:number[] = [];
-var i:number = 0;
+let i = 0;
 
 while (i < celsiusTemp.length) {
     const celsius = celsiusTemp[i];

@@ -22,8 +22,8 @@ function Percentage_converter(total: number, percentage: number): number {
     return percen;
 }
 
-const totalMarks = 100;
-const obtainedMarks = 75;
+var totalMarks:number = 100;
+var obtainedMarks:number = 75;
 const percentage = Percentage_converter(obtainedMarks, totalMarks);
 
 console.log(`Percentage: ${percentage}%`);
@@ -31,13 +31,13 @@ console.log(`Percentage: ${percentage}%`);
 
 // 3.
 function convertDaysToWeeks(days: number): string {
-    const weeks = Math.floor(days / 7);
-    const remainingDays = days % 7;
-    const Wks = `${weeks} weeks and ${remainingDays} days`
+    let weeks = Math.floor(days / 7);
+    let remainingDays = days % 7;
+    let Wks = `${weeks} weeks and ${remainingDays} days`
     return Wks;
 }
 
-const totalDays = 17;
+var totalDays:number = 17;
 
 console.log(`${totalDays} days = ${convertDaysToWeeks(totalDays)}`);
 
@@ -53,7 +53,7 @@ function Discount(price: number): number {
 
 var productPrice:number = 120;
 
-const discountAmount = Discount(productPrice);
+var discountAmount:number = Discount(productPrice);
 
 console.log(`Discount: $${discountAmount}`);
 
@@ -85,7 +85,7 @@ function clothsSuggest(temp: number): string {
     }
 }
 
-const Temperature = 5;
+var Temperature:number = 5;
 
 console.log(clothsSuggest(Temperature));
 
@@ -102,7 +102,7 @@ function Divisibility(num: number): string {
     }
 }
 
-const num = 15;
+var num:number = 15;
 
 console.log(Divisibility(num));
 
@@ -161,9 +161,9 @@ function taxCalculator(billAmount: number): number {
 var unitsConsumed:number = 300;
 var ratePerUnit:number = 32;
 
-const bill = unitsConsumed * ratePerUnit;
-const taxAmount = taxCalculator(bill);
-const totalBill = bill + taxAmount;
+var bill:number = unitsConsumed * ratePerUnit;
+var taxAmount:number = taxCalculator(bill);
+var totalBill:number = bill + taxAmount;
 
 console.log(`Bill Amount: $${bill}`);
 console.log(`Tax Amount: $${taxAmount}`);
